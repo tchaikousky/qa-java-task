@@ -5,8 +5,8 @@ public class Boat extends Vehicle{
 	private boolean hasMotor;
 	private boolean hasSail;
 
-	public Boat(String make, String model, String color, int weight, double length, double width, double height, boolean hasMotor, boolean hasSail) {
-		super(make, model, color, weight, length, width, height);
+	public Boat(String name, String make, String model, String color, int weight, double length, double width, double height, boolean hasMotor, boolean hasSail) {
+		super(name, make, model, color, weight, length, width, height);
 		this.hasMotor = hasMotor;
 		this.hasSail = hasSail;
 	}

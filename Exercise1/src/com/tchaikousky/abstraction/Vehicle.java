@@ -2,6 +2,7 @@ package com.tchaikousky.abstraction;
 
 public abstract class Vehicle {
 	
+	private String name;
 	private String make;
 	private String model;
 	private String color;
@@ -16,14 +17,14 @@ public abstract class Vehicle {
 		
 	}
 	
-	public Vehicle(String make, String model) {
+	public Vehicle(String name, String make, String model) {
+		this.name = name;
 		this.make = make;
 		this.model = model;
 	}
 	
-	public Vehicle(String make, String model, String color, int weight, double length, double width, double height) {
-		this.make = make;
-		this.model = model;
+	public Vehicle(String name, String make, String model, String color, int weight, double length, double width, double height) {
+		this(name, make, model);
 		this.color = color;
 		this.weight = weight;
 		this.length = length;
@@ -79,6 +80,14 @@ public abstract class Vehicle {
 		this.width = width;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 	public double getHeight() {
 		return height;
 	}

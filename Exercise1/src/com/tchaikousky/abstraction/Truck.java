@@ -4,8 +4,8 @@ public class Truck extends Vehicle{
 	private int truckBedLength;
 	private boolean isAWD;
 	
-	public Truck(String make, String model, String color, int weight, double length, double width, double height, int truckBedLength, boolean isAWD) {
-		super(make, model, color, weight, length, width, height);
+	public Truck(String name, String make, String model, String color, int weight, double length, double width, double height, int truckBedLength, boolean isAWD) {
+		super(name, make, model, color, weight, length, width, height);
 		this.truckBedLength = truckBedLength;
 		this.isAWD = isAWD;
 	}

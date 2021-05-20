@@ -5,8 +5,8 @@ public class Car extends Vehicle {
 	private String interiorColor;
 	private String engine;
 	
-	public Car(String make, String model, String color, int weight, double length, double width, double height, String interiorColor, String engine) {
-		super(make, model, color, weight, length, width, height);
+	public Car(String name, String make, String model, String color, int weight, double length, double width, double height, String interiorColor, String engine) {
+		super(name, make, model, color, weight, length, width, height);
 		this.interiorColor = interiorColor;
 		this.engine = engine;
 	}
