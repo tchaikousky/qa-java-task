@@ -41,6 +41,22 @@ public class Garage {
 		
 	}
 	
+	public void removeByType(String typeOfVehicle) {
+		ArrayList<Vehicle> vehiclesToRemove = new ArrayList<>();
+		
+		for(Vehicle vehicle : this.vehicleList) {
+			if(vehicle.getClass().getSimpleName().equals(typeOfVehicle)) {
+				vehiclesToRemove.add(vehicle);
+			}
+		}
+		
+		if(vehiclesToRemove.size() > 0) {
+			for(Vehicle vehicle : vehiclesToRemove) {
+				removeVehicle(vehicle);
+			}
+		}
+	}
+	
 	public void emptyGarage() {
 		this.vehicleList.clear();
 	}
