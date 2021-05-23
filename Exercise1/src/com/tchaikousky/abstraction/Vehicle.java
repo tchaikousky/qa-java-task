@@ -2,10 +2,12 @@ package com.tchaikousky.abstraction;
 
 public abstract class Vehicle {
 	
+	private static int idCount = 0;
 	private String name;
 	private String make;
 	private String model;
 	private String color;
+	private int id;
 	private int weight;
 	private double length;
 	private double width;
@@ -18,6 +20,8 @@ public abstract class Vehicle {
 	}
 	
 	public Vehicle(String name, String make, String model) {
+		incrementId();
+		this.id = idCount;
 		this.name = name;
 		this.make = make;
 		this.model = model;
@@ -30,6 +34,10 @@ public abstract class Vehicle {
 		this.length = length;
 		this.width = width;
 		this.height = height;
+	}
+	
+	public void incrementId() {
+		idCount += 1;
 	}
 	
 	public String getColor() {
@@ -95,6 +103,11 @@ public abstract class Vehicle {
 	public void setHeight(double height) {
 		this.height = height;
 	}
+	
+	public int getId() {
+		return id;
+	}
+	
 	
 	
 }

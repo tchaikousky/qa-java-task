@@ -57,6 +57,21 @@ public class Garage {
 		}
 	}
 	
+	public void removeById(int id) {
+		int index = -1;
+		for(int i = 0; i < vehicleList.size(); i++) {
+			if(vehicleList.get(i).getId() == id) {
+				index = i;
+				break;
+			}
+		}
+		
+		if(index != -1) {
+			vehicleList.remove(index);
+		}
+	}
+	
+	
 	public void emptyGarage() {
 		this.vehicleList.clear();
 	}
